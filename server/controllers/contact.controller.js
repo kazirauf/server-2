@@ -93,7 +93,7 @@ exports.update = (req, res) => {
 exports.delete = (req, res) => {
   const id = req.params.id;
 
-  Contact.findByIdAndRemove(id, { useFindAndModify: false })
+  Contact.findByIdAndDelete(id, { useFindAndModify: false })
     .then(data => {
       if (!data) {
         res.status(404).send({

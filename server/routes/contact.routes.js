@@ -16,7 +16,8 @@ module.exports = app => {
     router.put("/:id", contacts.update);
   
     // Delete a Contact with id
-    router.delete("/:id", contacts.delete);
+    // TODO: this is not working
+      router.delete("/:id", contacts.delete); 
   
     // Delete all Contacts
     router.delete("/", contacts.deleteAll);
